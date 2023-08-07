@@ -80,13 +80,13 @@ After you push to the observed github branch, the pipeline will be triggered and
 
 ## Docker Setup and Deployment
 
-1. To verify if Docker is running on the EC2 instance, execute the following command:
+1. To verify if Docker is running on the EC2 instance, execute the following command inside your instance:
 
    ```
    sudo systemctl is-active docker
    ```
 
-2. Check if CodeDeploy agent is running on the EC2 instance using the following command:
+2. Check if CodeDeploy agent is running on the EC2 instance using the following command inside your instance:
 
    ```
    sudo service codedeploy-agent status
