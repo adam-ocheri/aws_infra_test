@@ -136,13 +136,13 @@ export class AwsInfraStack extends cdk.Stack {
             commands: [
               'echo Logging in to Docker Hub...',
               'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin',
-              'echo docker info'
+              'docker info'
             ],
           },
           build: {
             commands: [
               'echo Building the Docker image...',
-              'docker build -t $DOCKER_IMAGE_NAME:latest .',
+              'docker build --no-cache -t $DOCKER_IMAGE_NAME:latest .',
               'echo Pushing the Docker image...',
               'docker push $DOCKER_IMAGE_NAME:latest',
             ],
