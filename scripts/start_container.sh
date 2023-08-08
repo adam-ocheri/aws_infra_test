@@ -9,7 +9,7 @@ if [ -f "$env_file" ]; then
    source "$env_file"
 echo "Start container"
     docker pull $DOCKER_IMAGE_NAME
-    docker run -d -p 80:3000 $DOCKER_IMAGE_NAME
+    docker run -d -p 80:5000 $DOCKER_IMAGE_NAME
 else
     echo "Error: .env file not found in the script directory."
 fi
